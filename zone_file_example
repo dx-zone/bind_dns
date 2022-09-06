@@ -1,0 +1,14 @@
+$TTL    300 ; default TTL for the zone
+$ORIGIN example.net. ; domain to append to unqualified records
+@       IN      SOA     ns1.example.net. email.example.net. (
+                              1         ; Serial
+                            5m         ; Refresh
+                             1m         ; Retry
+                      3w2d         ; Expire
+                             1m )       ; Negative Cache TTL = nxdomain ttl
+
+@       IN      NS      ns1.example.net.
+@       IN      NS      ns2.example.net.
+
+
+text.example.net.   300      IN      TXT      "some data"
