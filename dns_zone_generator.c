@@ -4,11 +4,10 @@
  ./zone example.net ns1.example.net email.example.net 1 ns1.example.net ns2.example.net view 'some text'
 */
 
-#include <cs50.h>
 #include <stdio.h>
 
 
-int main(int argc, string argv[])
+int main(int argc, char *argv[])
 {
 	printf("$TTL    300 ; default TTL for the zone\n");
 	printf("$ORIGIN %s. ; domain for unqualified records\n", argv[1]);
